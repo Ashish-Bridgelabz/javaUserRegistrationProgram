@@ -1,8 +1,8 @@
 package com.bridgelabz.userRegistration;
 
-import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 public class UserRegistration {
     //VARIABLE
     private static final String COUNTRY_CODE = "91";
@@ -34,9 +34,17 @@ public class UserRegistration {
 
     public boolean validMobileNumber(String mobileNumber) {
         //PATTERN FOR VALID MOBILE NUMBER
-        String patternValidMobileNumber = "^"+COUNTRY_CODE+ "[ ][9876]{1}[0-9]{9}";
+        String patternValidMobileNumber = "^" + COUNTRY_CODE + "[ ][9876]{1}[0-9]{9}";
         Pattern p = Pattern.compile(patternValidMobileNumber);
         Matcher m = p.matcher(mobileNumber);
+        return m.matches();
+    }
+
+    public boolean validLengthPassword(String lengthPassword) {
+        //PATTERN FOR VALID PASSWORD
+        String patternValidLengthPassword = "^.{8,}$";
+        Pattern p = Pattern.compile(patternValidLengthPassword);
+        Matcher m = p.matcher(lengthPassword);
         return m.matches();
     }
 }
