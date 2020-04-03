@@ -33,6 +33,14 @@ public class UserRegistrationTest {
         boolean result = validator.validMobileNumber("91 9123423829");
         Assert.assertEquals(true,result);
     }
+    @Test
+    public void givenLengthPassword_WhenProper_ShouldReturnTrue()
+    {
+        UserRegistration validator = new UserRegistration();
+        boolean result = validator.validLengthPassword("asdHdjsiw");
+        Assert.assertEquals(true,result);
+    }
 }
+
 
 
