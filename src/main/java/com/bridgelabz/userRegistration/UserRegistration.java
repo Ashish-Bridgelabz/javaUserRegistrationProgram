@@ -56,11 +56,21 @@ public class UserRegistration {
         Matcher m = p.matcher(oneUpperCase);
         return m.matches();
     }
+
+    //PATTERN FOR ATLEAST 1 NUMERICE VALUE
     public boolean atleastOneNumericValue(String numericValue)
     {
         String patternAtLeastOneNumber="[A-Z0-9a-z]*[0-9][A-Z0-9a-z]*";
         Pattern p = Pattern.compile(patternAtLeastOneNumber);
         Matcher m = p.matcher(numericValue);
+        return m.matches();
+    }
+    //PATTERN FOR ATLEAST 1 SPECIAL CHARACTER PASSWORD
+    public boolean exactlyOneSpecialCharacter(String specialCharacter) {
+
+        String patternExactlyOneSpecialCharacter = "[A-Z0-9a-z]*[!@#%^&]{1}[A-Z0-9a-z]*";
+        Pattern P = Pattern.compile(patternExactlyOneSpecialCharacter);
+        Matcher m = P.matcher(specialCharacter);
         return m.matches();
     }
 }
