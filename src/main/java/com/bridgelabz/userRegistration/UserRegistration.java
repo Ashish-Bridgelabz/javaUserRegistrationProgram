@@ -47,4 +47,13 @@ public class UserRegistration {
         Matcher m = p.matcher(lengthPassword);
         return m.matches();
     }
+
+    //Validating password atleast one upper case
+    public boolean atLeastOneUpperCase(String oneUpperCase)
+    {
+        String upperCaseAtleastOne ="[a-z0-9a-z]*[A-Z][A-Z0-9a-z]*";
+        Pattern p = Pattern.compile(upperCaseAtleastOne);
+        Matcher m = p.matcher(oneUpperCase);
+        return m.matches();
+    }
 }
