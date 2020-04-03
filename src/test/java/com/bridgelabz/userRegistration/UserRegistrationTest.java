@@ -25,6 +25,14 @@ public class UserRegistrationTest {
         boolean result = validator.validEmailId("asas49@gmail.com");
         Assert.assertEquals(true,result);
     }
+    @Test
+    public void givenMobileNumber_WhenProper_ShouldReturnTrue()
+    {
+        //TEST CASE FOR VALIDATE MOBILE NUMBER
+        UserRegistration validator = new UserRegistration();
+        boolean result = validator.validMobileNumber("91 9123423829");
+        Assert.assertEquals(true,result);
+    }
 }
 
 
