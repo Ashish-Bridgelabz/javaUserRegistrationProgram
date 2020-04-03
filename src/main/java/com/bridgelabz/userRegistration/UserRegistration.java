@@ -56,4 +56,11 @@ public class UserRegistration {
         Matcher m = p.matcher(oneUpperCase);
         return m.matches();
     }
+    public boolean atleastOneNumericValue(String numericValue)
+    {
+        String patternAtLeastOneNumber="[A-Z0-9a-z]*[0-9][A-Z0-9a-z]*";
+        Pattern p = Pattern.compile(patternAtLeastOneNumber);
+        Matcher m = p.matcher(numericValue);
+        return m.matches();
+    }
 }
