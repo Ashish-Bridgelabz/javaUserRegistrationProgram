@@ -40,6 +40,14 @@ public class UserRegistrationTest {
         boolean result = validator.validLengthPassword("asdHdjsiw");
         Assert.assertEquals(true,result);
     }
+    @Test
+    public void givenUpperCase_WhenProper_ShouldReturnTrue()
+    {
+        UserRegistration validator = new UserRegistration();
+        boolean result = validator.atLeastOneUpperCase("asH1234");
+        Assert.assertEquals(true,result);
+    }
+
 }
 
 
