@@ -18,6 +18,13 @@ public class UserRegistrationTest {
         boolean result = validator.validLasttName("Kum");
         Assert.assertEquals(true, result);
     }
+    @Test
+    public void givenEmailId_WhenProper_ShouldReturnTrue() {
+        //TEST CASE FOR VALIDATE EMAILID
+        UserRegistration validator = new UserRegistration();
+        boolean result = validator.validEmailId("asas49@gmail.com");
+        Assert.assertEquals(true,result);
+    }
 }
 
 
